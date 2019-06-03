@@ -10,7 +10,8 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with evens removed
      */
     public Integer[] deleteEvens(Integer[] ints) {
-        return null;
+
+        return deleteMultiplesOfN(ints,2);
     }
 
     /**
@@ -19,7 +20,18 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with odds removed
      */
     public Integer[] deleteOdds(Integer[] ints) {
-        return null;
+
+        Integer[] result = new Integer[ints.length - deleteEvens(ints).length];
+        int x = 0;
+
+        for (Integer i : ints) {
+            if (i % 2 == 0) {
+                result[x] = i;
+                x++;
+            }
+        }
+        return result;
+
     }
 
     /**
@@ -28,7 +40,7 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with numbers indivisible by 3 removed
      */
     public Integer[] deleteMultiplesOf3(Integer[] ints) {
-        return null;
+        return deleteMultiplesOfN(ints, 3);
     }
 
     /**
