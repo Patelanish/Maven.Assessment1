@@ -70,6 +70,8 @@ public abstract class Pet implements Animal {
      */
     public PetOwner getOwner() {
 
-        return getOwner();
+
+
+        return this.getOwner();
     }
 }
