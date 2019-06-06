@@ -2,28 +2,29 @@ package com.zipcodewilmington.assessment1.part5;
 
 public class Palindrome {
 
-    public Integer countPalindromes(String input){
+    public Integer countPalindromes(String input) {
 
-        String a;
-        int countSubs = toString().length();
-        for(int i = 0; i < toString().length(); i++){
-            for (int j = i+ 2; j <= toString().length(); j++){
-                a = toString().substring(i,j);
-                countSubs +=count(a);
+        int a = input.length();
+        for (int i = 0; i < input.length(); i++) {
+            for (int b = i + 2; b <= input.length(); b++) {
+                a += ispalindrome(input.substring(i, b));
 
             }
         }
-        return countSubs;
+        return a;
+
     }
-    public static int count(String a){
-        for (int i = 0; i <a.length(); i++) {
-            if (a.charAt(i) != a.charAt(a.length() - 1 - i))
+
+
+    private int ispalindrome(String substring) {
+
+        for(int i = 0; i < substring.length()/ 2; i++) {
+            if(substring.charAt(i) !=substring.charAt(substring.length() - 1 - i))
                 return 0;
-            }
-        return 1;
-
         }
+        return 1;
     }
+}
 
 
 

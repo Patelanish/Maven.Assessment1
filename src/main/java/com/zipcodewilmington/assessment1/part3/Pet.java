@@ -46,7 +46,7 @@ public abstract class Pet implements Animal {
      */
     public String getName() {
 
-        return getName();
+        return null;
     }
 
     /**
@@ -54,7 +54,7 @@ public abstract class Pet implements Animal {
      */
     public Integer getAge() {
 
-        return getAge();
+        return null;
     }
 
     /**
@@ -72,6 +72,6 @@ public abstract class Pet implements Animal {
 
 
 
-        return this.getOwner();
+        return null;
     }
 }
