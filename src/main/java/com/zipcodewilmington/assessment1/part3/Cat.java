@@ -6,8 +6,11 @@ package com.zipcodewilmington.assessment1.part3;
 public class Cat extends Pet {
     /**
      * @param name name of this Cat
+     *
      * @param age age of this Cat
      */
+    String name;
+    int age;
     public Cat(String name, Integer age) {
 
         super(name,age);
@@ -19,6 +22,7 @@ public class Cat extends Pet {
      */
     public Cat(Integer age) {
         super(age);
+        this.name = "Cat name";
 
     }
 
@@ -27,6 +31,7 @@ public class Cat extends Pet {
      */
     public Cat(String name) {
         super(name);
+        this.age = 0;
 
     }
 

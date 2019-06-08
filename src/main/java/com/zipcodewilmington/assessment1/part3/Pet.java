@@ -7,14 +7,18 @@ import static com.sun.xml.internal.ws.policy.sourcemodel.wspolicy.XmlToken.Name;
  */
 public abstract class Pet implements Animal {
 
-
+String name;
+Integer age;
+PetOwner owner;
     /**
      * nullary constructor
      * by default, pet has age of 0; name of "";
      */
     public Pet() {
 
-        super();
+        this.name = "";
+        this.age = 0;
+
     }
 
     /**
@@ -22,7 +26,8 @@ public abstract class Pet implements Animal {
      */
     public Pet(String name) {
 
-        super();
+        this.name = name;
+        this.age = 0;
 
     }
 
@@ -32,6 +37,9 @@ public abstract class Pet implements Animal {
      */
     public Pet(int age) {
 
+        this.name = "";
+        this.age = age;
+
     }
 
     /**
@@ -39,6 +47,9 @@ public abstract class Pet implements Animal {
      * @param age age of this pet
      */
     public Pet(String name, int age) {
+
+        this.name = name;
+        this.age = age;
     }
 
     /**
@@ -46,7 +57,7 @@ public abstract class Pet implements Animal {
      */
     public String getName() {
 
-        return null;
+        return name;
     }
 
     /**
@@ -54,7 +65,7 @@ public abstract class Pet implements Animal {
      */
     public Integer getAge() {
 
-        return null;
+        return age;
     }
 
     /**
@@ -63,6 +74,8 @@ public abstract class Pet implements Animal {
      */
     public void setOwner(PetOwner newPetOwner) {
 
+        this.owner = newPetOwner;
+
     }
 
     /**
@@ -70,8 +83,6 @@ public abstract class Pet implements Animal {
      */
     public PetOwner getOwner() {
 
-
-
-        return null;
+        return owner;
     }
 }
